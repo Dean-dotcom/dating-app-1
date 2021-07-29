@@ -30,6 +30,7 @@ if "DEVELOPMENT" in os.environ or "TESTING" in os.environ:
         cf('radians', 1, math.radians)
         cf('sin', 1, math.sin)
 
+
 class LocationManager(models.Manager):
     
     # Assistance from https://stackoverflow.com/questions/19703975/django-sort-by-distance

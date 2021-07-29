@@ -57,11 +57,13 @@ class UserRegistrationForm(UserCreationForm):
             raise ValidationError("Passwords do not match. Please try again.")
             
         return password2    
-        
+
+
 class EditProfileForm(UserChangeForm):
     password = None
     confirm_password = forms.CharField(widget=forms.PasswordInput)
     # Get rid of password help text
+
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user',None)
         super(EditProfileForm, self).__init__(*args, **kwargs)
